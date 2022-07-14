@@ -1,0 +1,289 @@
+/*Corpo Geral da Página*/
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFFFFF;
+}
+
+/*Menu Superior da Página*/
+.menu{
+    display: flex;
+    justify-content: right;
+    font-size: 13px;
+}
+.menu ul,menu li{
+    list-style: none;
+    display: flex;
+}
+.menu li{
+    padding: 10px;
+}
+.menu a{
+    color:#000;
+    text-decoration: none;
+}
+#go{
+    border-radius: 3px;
+    background-color: #1A73E8;
+    color:#FFF;
+    padding: 10px 29px;
+    margin: 0px 8px;
+    font-size: 14px;
+}
+#go:hover{
+    background-color: #6397eb;
+}
+.goTo:hover{
+    text-decoration: underline;
+}
+.menu [src="design/imagens/pontos.png"]{
+    width: 15px;
+    height: 15px;
+    filter: opacity(70%);
+}
+.menu li[class="gApps"]:hover{
+    background-color: #f1f1f1;
+    box-shadow: 1px 1px 2px #f1f1f1;
+    border-radius: 50%;
+}
+
+/*Meio da Página Conteúdo Principal*/
+main{
+    display:flex;
+    justify-content: center;
+    text-align:center;
+    margin-top:100px;
+}
+.buscador{
+    display: flex;
+    justify-content: center;
+    background-color: #FFF;
+    border:solid 1px #ddd;
+    border-radius: 50px;
+    width:600px;
+    height: 40px;
+    margin-top: 20px;
+}
+.buscador:hover{
+    box-shadow: 1px 1px 5px #AAA;
+}
+.buscador input{
+    height: 100%;
+    width: 480px;
+    font-size: 15px;
+    border:none;
+    outline: 0;
+}
+#lupa{
+    padding:13px 0px 10px 0px;
+    width: 15px;
+    height: 15px;
+    border:transparent;
+}
+#teclado{
+    padding:8px 0px 5px 0px;
+    width: 20px;
+    height: 25px;
+    filter:opacity(60%);
+    border:transparent;
+}
+#microfone{
+    width: 13px;
+    padding:10px 0px 10px 0px;
+    margin-left: 10px;
+    border:transparent;
+}
+/*botoes de busca*/
+.botoes input[type="submit"] {/*AQUI COPIEI ALGUNS COMANDOS*/
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    margin-top: 30px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+.botoes input:hover{
+    border: solid 0.5px #ddd;
+    box-shadow: 2px 2px 2px #eee;
+}
+
+/* Rodapé da Página*/
+footer{
+    background-color: #f2f2f2; 
+    width:100%;
+    position:fixed;
+    bottom: 0;
+}
+footer a{
+    display: flex;
+    color: #70757A;
+    text-decoration: none;
+    padding: 0 10px 0 10px;
+}
+.pais{
+    font-size: 15px;
+    border-bottom: solid 0.5px#DADCE0;
+    padding: 15px 30px; 
+    color:#70757A;
+}
+.submenu{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    word-wrap: break-word;
+}
+.submenu li a:hover{
+    text-decoration: underline;
+}
+.submenu1 ul,
+.submenu2 ul{
+    display: flex;
+    list-style: none;
+}
+.submenu2 li{
+    margin-right: 20px; 
+}
+
+/*Responsividade da Página*/
+
+@media (min-width:280px) and (max-width:700px){
+    *{
+        font-size:10px;
+    }
+   body{
+       background-color: #FFF;
+   }
+   .menu{
+        display: flex;
+        justify-content: right;
+        font-size: 10px;
+    }
+    #go{
+        padding: 5px 10px;
+        margin: 0;
+        font-size: 10px;
+    }
+    main{
+        display: flex;
+        justify-content: center;
+        margin-top:100px;
+    }
+    .logo img{
+        width:180px;
+    }
+    .buscador{
+        width:300px;
+        height: 20px;
+    }
+    .buscador input{
+        width: 80%;
+        font-size: 10px;
+    }
+    #lupa{
+        padding:5px 0px 5px 0px;
+        width: 10px;
+        height: 10px;
+    }
+    #teclado{
+        padding:3px 0px 5px 0px;
+        width: 10px;
+        height: 15px;
+    }
+    #microfone{
+        width: 9px;
+        padding:3px 2px 3px 0px;
+    }
+    .botoes input[type="submit"]{
+        font-size: 10px;
+        margin: 11px 4px;
+        margin-top: 30px;
+        padding: 0 13px;
+        height: 30px; 
+    }
+    .pais{
+        font-size: 12px;              
+    }
+    .submenu{
+        flex-wrap: wrap;
+    }
+}
+@media(min-height:280px) and (max-height:520px){
+    main{
+       margin-top:0px;
+    }
+    .buscador{
+        margin-top: 0;
+    }
+    .botoes input[type="submit"]{
+        margin-top: 5px;
+    }
+    .pais{
+        padding:0;
+    }
+}
+@media(min-width:1400px){
+    *{
+        font-size: 20px;
+    }
+    #go{
+        padding: 10px 20px;
+        margin: 0;
+        font-size: 18px;
+    }
+    main{
+       margin-top:150px;
+    }
+    .logo img{
+        width:550px;
+    }
+    .buscador{
+        height: 50px;
+        width: 800px;
+    }
+    .buscador input{
+        width: 75%;
+        font-size: 20px;
+    }
+    #lupa{
+        padding: 12px 30px 5px 0px;
+        width: 25px;
+        height: 25px;
+    }
+    #teclado{
+        padding:8px 0px 5px 0px;
+        width: 30px;
+        height: 35px;
+    }
+    #microfone{
+        width: 18px;
+        padding: 12px 0px 0px 0px;
+        margin-left: 30px;
+    }
+    .botoes input[type="submit"]{
+        font-size: 20px;
+        margin: 21px 8px;
+        margin-top: 60px;
+        padding: 10px 53px;
+        height: 60px; 
+    }
+    .pais{
+        font-size: 25px;
+    }
+    
+}
+
+
